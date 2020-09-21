@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,6 +9,12 @@
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="42.693"
+        mapbox:mapbox_cameraTargetLng="23.322"
+        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_cameraZoomMax="16"
+        mapbox:mapbox_cameraZoomMin="10"
+        mapbox:mapbox_uiRotateGestures="true" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
