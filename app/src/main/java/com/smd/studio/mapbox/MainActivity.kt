@@ -25,34 +25,37 @@ class MainActivity : AppCompatActivity() {
         mapView = findViewById(R.id.mapView)
         mapView?.onCreate(savedInstanceState)
         mapView?.getMapAsync { mapboxMap ->
-            mapboxMap.setStyle(Style.MAPBOX_STREETS) {
-                // Map is set up and the style has loaded. Now you can add data or make other map adjustments
-            }
+//            mapboxMap.setStyle(Style.DARK) {
+//                // Map is set up and the style has loaded. Now you can add data or make other map adjustments
+//            }
 
             //Markers
-            val marker = MarkerOptions().apply {
-                position(LatLng(42.693, 23.322))
-                title("My First Marker")
-            }
-            mapboxMap.addMarker(marker)
+//            val marker = MarkerOptions().apply {
+//                position(LatLng(42.693, 23.322))
+//                title("My First Marker")
+//            }
+//            mapboxMap.addMarker(marker)
             //https://docs.mapbox.com/android/maps/overview/annotations/#markers
 
             // Drawing a rectangle
-            val polygonLatLngList: MutableList<LatLng> = ArrayList()
-            polygonLatLngList.add(LatLng(42.690, 23.320))
-            polygonLatLngList.add(LatLng(42.700, 23.320))
-            polygonLatLngList.add(LatLng(42.700, 23.330))
-            polygonLatLngList.add(LatLng(42.690, 23.330))
-            mapboxMap.addPolygon(
-                PolygonOptions()
-                    .addAll(polygonLatLngList)
-                    .fillColor(Color.GREEN)
-            )
+//            val polygonLatLngList: MutableList<LatLng> = ArrayList()
+//            polygonLatLngList.add(LatLng(42.690, 23.320))
+//            polygonLatLngList.add(LatLng(42.700, 23.320))
+//            polygonLatLngList.add(LatLng(42.700, 23.330))
+//            polygonLatLngList.add(LatLng(42.690, 23.330))
+//            mapboxMap.addPolygon(
+//                PolygonOptions()
+//                    .addAll(polygonLatLngList)
+//                    .fillColor(Color.GREEN)
+//            )
+            //https://docs.mapbox.com/android/maps/overview/annotations/#draw-a-polygon-on-the-map
 
-//            // Custom Styles
-//            mapboxMap.setStyle(Style.Builder().fromUri("")) {
-//                // Custom map style has been loaded and map is now ready
-//            }
+            // Custom Styles
+            mapboxMap.setStyle(Style.Builder().fromUri("mapbox://styles/sdoychev/ckff90r27114c19o9u7dtbopj")) {
+                // Custom map style has been loaded and map is now ready
+            }
+            //https://docs.mapbox.com/android/maps/overview/styling-map/
+            //https://studio.mapbox.com/
         }
     }
 
