@@ -25,33 +25,33 @@ class MainActivity : AppCompatActivity() {
         mapView = findViewById(R.id.mapView)
         mapView?.onCreate(savedInstanceState)
         mapView?.getMapAsync { mapboxMap ->
-            mapboxMap.setStyle(Style.DARK) {
+            mapboxMap.setStyle(Style.MAPBOX_STREETS) {
                 // Map is set up and the style has loaded. Now you can add data or make other map adjustments
             }
 
-            //Markers
-            val marker = MarkerOptions().apply {
-                position(LatLng(42.693, 23.322))
-                title("My First Marker")
-            }
-            mapboxMap.addMarker(marker)
-
-            // Drawing a rectangle
-            val polygonLatLngList: MutableList<LatLng> = ArrayList()
-            polygonLatLngList.add(LatLng(42.690, 23.320))
-            polygonLatLngList.add(LatLng(42.700, 23.320))
-            polygonLatLngList.add(LatLng(42.700, 23.330))
-            polygonLatLngList.add(LatLng(42.690, 23.330))
-            mapboxMap.addPolygon(
-                PolygonOptions()
-                    .addAll(polygonLatLngList)
-                    .fillColor(Color.GREEN)
-            )
-
-            // Custom Styles
-            mapboxMap.setStyle(Style.Builder().fromUri("")) {
-                // Custom map style has been loaded and map is now ready
-            }
+//            //Markers
+//            val marker = MarkerOptions().apply {
+//                position(LatLng(42.693, 23.322))
+//                title("My First Marker")
+//            }
+//            mapboxMap.addMarker(marker)
+//
+//            // Drawing a rectangle
+//            val polygonLatLngList: MutableList<LatLng> = ArrayList()
+//            polygonLatLngList.add(LatLng(42.690, 23.320))
+//            polygonLatLngList.add(LatLng(42.700, 23.320))
+//            polygonLatLngList.add(LatLng(42.700, 23.330))
+//            polygonLatLngList.add(LatLng(42.690, 23.330))
+//            mapboxMap.addPolygon(
+//                PolygonOptions()
+//                    .addAll(polygonLatLngList)
+//                    .fillColor(Color.GREEN)
+//            )
+//
+//            // Custom Styles
+//            mapboxMap.setStyle(Style.Builder().fromUri("")) {
+//                // Custom map style has been loaded and map is now ready
+//            }
         }
     }
 
