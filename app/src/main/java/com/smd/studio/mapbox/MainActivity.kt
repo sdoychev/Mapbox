@@ -29,13 +29,14 @@ class MainActivity : AppCompatActivity() {
                 // Map is set up and the style has loaded. Now you can add data or make other map adjustments
             }
 
-//            //Markers
-//            val marker = MarkerOptions().apply {
-//                position(LatLng(42.693, 23.322))
-//                title("My First Marker")
-//            }
-//            mapboxMap.addMarker(marker)
-//
+            //Markers
+            val marker = MarkerOptions().apply {
+                position(LatLng(42.693, 23.322))
+                title("My First Marker")
+            }
+            mapboxMap.addMarker(marker)
+            //https://docs.mapbox.com/android/maps/overview/annotations/#markers
+
 //            // Drawing a rectangle
 //            val polygonLatLngList: MutableList<LatLng> = ArrayList()
 //            polygonLatLngList.add(LatLng(42.690, 23.320))
