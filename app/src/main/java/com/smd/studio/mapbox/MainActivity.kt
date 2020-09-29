@@ -37,18 +37,18 @@ class MainActivity : AppCompatActivity() {
             mapboxMap.addMarker(marker)
             //https://docs.mapbox.com/android/maps/overview/annotations/#markers
 
-//            // Drawing a rectangle
-//            val polygonLatLngList: MutableList<LatLng> = ArrayList()
-//            polygonLatLngList.add(LatLng(42.690, 23.320))
-//            polygonLatLngList.add(LatLng(42.700, 23.320))
-//            polygonLatLngList.add(LatLng(42.700, 23.330))
-//            polygonLatLngList.add(LatLng(42.690, 23.330))
-//            mapboxMap.addPolygon(
-//                PolygonOptions()
-//                    .addAll(polygonLatLngList)
-//                    .fillColor(Color.GREEN)
-//            )
-//
+            // Drawing a rectangle
+            val polygonLatLngList: MutableList<LatLng> = ArrayList()
+            polygonLatLngList.add(LatLng(42.690, 23.320))
+            polygonLatLngList.add(LatLng(42.700, 23.320))
+            polygonLatLngList.add(LatLng(42.700, 23.330))
+            polygonLatLngList.add(LatLng(42.690, 23.330))
+            mapboxMap.addPolygon(
+                PolygonOptions()
+                    .addAll(polygonLatLngList)
+                    .fillColor(Color.GREEN)
+            )
+
 //            // Custom Styles
 //            mapboxMap.setStyle(Style.Builder().fromUri("")) {
 //                // Custom map style has been loaded and map is now ready
