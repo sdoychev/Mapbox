@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             //https://docs.mapbox.com/android/maps/overview/annotations/#draw-a-polygon-on-the-map
 
             // Custom Styles
-            mapboxMap.setStyle(Style.Builder().fromUri("mapbox://styles/sdoychev/ckff90r27114c19o9u7dtbopj")) {
+            mapboxMap.setStyle(Style.Builder().fromUri("mapbox://styles/sdoychev/ckfoa4vzv03ja19ns923vr5cj")) {
                 // Custom map style has been loaded and map is now ready
             }
             //https://docs.mapbox.com/android/maps/overview/styling-map/
